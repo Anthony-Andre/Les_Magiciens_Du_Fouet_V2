@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body {
+	margin: 0;
+	padding:0;
+	background-color: #ffffff;
+	font-family: 'Lobster', cursive;
+}
+#site {
+	margin: auto;
+	border: 1px solid #030;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-areas:
+		"header header"
+		"nav article"
+		"footer footer";
+}
+header {
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 20% 80%;
+}
+header a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header img{
+	width: 125px;
+	height: auto;
+}
+header h1{
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	color: rgb(206, 151, 50);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav {
+	grid-area: nav;
+	background-color: rgb(206, 151, 50);
+}
+ul {
+	margin: 0;
+	padding:0;	
+	text-align: center;
+}
+ul li {
+	list-style: none;
+	padding: 20px;
+}
+ul li:hover {
+	background-color: #930;
+}
+ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 17px;
+}
+article {
+	grid-area: article;
+	background-color: #fff;
+	padding: 15px;
+}
+article h1 {
+	text-align: center;
+	font-size: 25px;
+}
+article h2, article h4{
+	font-size: 18px;
+}
+article p, article h2, article h4{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.symbolesEchelle{
+	width: 22px;
+	height: auto;
+	margin: auto 5px;
+}
+.lien {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.lien:hover {
+	color: #00f;
+	text-decoration: underline;
+}
+.box {
+	width: 75%;
+	margin: auto;
+	padding: 15px;
+	text-align: center;
+}
+input[type='text'], input[type='password'], textarea[name='description'] {
+	width: 100%;
+	padding: 15px;
+}
+textarea[name='article'] {
+	width: 100%;
+	padding: 15px;
+	height: 100px;
+}
+input[type='submit'] {
+	width: 80%;
+	padding: 15px;
+	font-size: 30px;
+	background-color: #F90;
+	border: none;
+	cursor: pointer;
+}
+input[type='submit']:hover {
+	background-color: #F60;
+}
+.red {
+	color: red;
+}
+.green {
+	color: #060;
+}
+footer {
+	grid-area: footer;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+#site {
+	width: 90%;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"header"
+		"nav"
+		"article"
+		"footer";
+}
+ul {
+	display: flex;	
+	justify-content: center;
+}	
+}
+
+
+
+
